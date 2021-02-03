@@ -7,18 +7,26 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
        }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else {
+            return
+        }
+        welcomeVC.userName = userNameTextField.text
     }
     
     @IBAction func logInButtonPressed() {
@@ -49,16 +57,17 @@ class LoginViewController: UIViewController {
         }
         alert.addAction(okAlert)
         present(alert, animated: true)
-        }
-
-   
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {
-            return
-        }
-        welcomeVC.userName = userNameTextField.text
-
     }
-
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            textField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            textField.resignFirstResponder()
+            performSegue(withIdentifier: "goToWelcome", sender: nil)
+        }
+        return true
+    }
 }
+
