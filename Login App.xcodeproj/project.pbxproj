@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		705F3D0D25C9940000376DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F3D0C25C9940000376DD3 /* AppDelegate.swift */; };
 		705F3D0F25C9940000376DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F3D0E25C9940000376DD3 /* SceneDelegate.swift */; };
-		705F3D1125C9940000376DD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F3D1025C9940000376DD3 /* ViewController.swift */; };
 		705F3D1425C9940000376DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705F3D1225C9940000376DD3 /* Main.storyboard */; };
 		705F3D1625C9940200376DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705F3D1525C9940200376DD3 /* Assets.xcassets */; };
 		705F3D1925C9940200376DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705F3D1725C9940200376DD3 /* LaunchScreen.storyboard */; };
+		705F3D2B25CACF3900376DD3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F3D2A25CACF3900376DD3 /* LoginViewController.swift */; };
+		705F3D3025CB004600376DD3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705F3D2F25CB004600376DD3 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		705F3D0925C9940000376DD3 /* Login App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		705F3D0C25C9940000376DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		705F3D0E25C9940000376DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		705F3D1025C9940000376DD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		705F3D1325C9940000376DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		705F3D1525C9940200376DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		705F3D1825C9940200376DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		705F3D1A25C9940200376DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		705F3D2A25CACF3900376DD3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		705F3D2F25CB004600376DD3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				705F3D0C25C9940000376DD3 /* AppDelegate.swift */,
 				705F3D0E25C9940000376DD3 /* SceneDelegate.swift */,
-				705F3D1025C9940000376DD3 /* ViewController.swift */,
+				705F3D2A25CACF3900376DD3 /* LoginViewController.swift */,
+				705F3D2F25CB004600376DD3 /* WelcomeViewController.swift */,
 				705F3D1225C9940000376DD3 /* Main.storyboard */,
 				705F3D1525C9940200376DD3 /* Assets.xcassets */,
 				705F3D1725C9940200376DD3 /* LaunchScreen.storyboard */,
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				705F3D1125C9940000376DD3 /* ViewController.swift in Sources */,
+				705F3D2B25CACF3900376DD3 /* LoginViewController.swift in Sources */,
+				705F3D3025CB004600376DD3 /* WelcomeViewController.swift in Sources */,
 				705F3D0D25C9940000376DD3 /* AppDelegate.swift in Sources */,
 				705F3D0F25C9940000376DD3 /* SceneDelegate.swift in Sources */,
 			);
