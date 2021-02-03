@@ -23,9 +23,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {
-            return
-        }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = userNameTextField.text
     }
     
@@ -50,6 +48,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.text = ""
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case userNameTextField:
+            textField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            textField.resignFirstResponder()
+            performSegue(withIdentifier: "goToWelcome", sender: nil)
+        default:
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
     private func showAlert(with title: String, and message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAlert = UIAlertAction(title: "OK", style: .default) { _ in
@@ -57,17 +69,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         alert.addAction(okAlert)
         present(alert, animated: true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == userNameTextField {
-            textField.resignFirstResponder()
-            passwordTextField.becomeFirstResponder()
-        } else if textField == passwordTextField {
-            textField.resignFirstResponder()
-            performSegue(withIdentifier: "goToWelcome", sender: nil)
-        }
-        return true
     }
 }
 
