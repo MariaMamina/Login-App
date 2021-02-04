@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ieu-t1-bPe">
-                                <rect key="frame" x="12" y="55" width="296" height="213"/>
+                                <rect key="frame" x="12" y="105" width="296" height="213"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Xas-eH-6EF">
                                         <rect key="frame" x="0.0" y="0.0" width="296" height="93"/>
@@ -69,7 +69,7 @@
                         <color key="backgroundColor" red="0.9204980731010437" green="0.8686949610710144" blue="0.96108204126358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ieu-t1-bPe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="26X-Dw-Uyh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ieu-t1-bPe" secondAttribute="bottom" constant="300" id="x2j-IP-wu2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ieu-t1-bPe" secondAttribute="bottom" constant="250" id="x2j-IP-wu2"/>
                         </constraints>
                     </view>
                     <connections>

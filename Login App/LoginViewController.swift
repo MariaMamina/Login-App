@@ -7,19 +7,33 @@
 
 import UIKit
 
+class User {var name: String
+            var password: String
+    
+    init (name: String, password: String) {
+        self.name = name
+        self.password = password
+    }
+}
+
+let newUser = User(name: "User", password: "Password")
+
+
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameTextField.delegate = self
         passwordTextField.delegate = self
-       }
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -28,7 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func logInButtonPressed() {
-        if userNameTextField.text == "User" && passwordTextField.text == "Password" {
+        if userNameTextField.text == newUser.name && passwordTextField.text == newUser.password {
         performSegue(withIdentifier: "goToWelcome", sender: nil)
         } else {
             showAlert(with: "Invalid login or password", and: "Please, enter corect login or password")
@@ -36,11 +50,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgotUserName() {
-        showAlert(with: "Oops!", and: "Your name is User 😉")
+        showAlert(with: "Oops!", and: "Your name is \(newUser.name) 😉")
     }
     
     @IBAction func forgotPassword() {
-        showAlert(with: "Oops!", and: "Your password is Password 😉")
+        showAlert(with: "Oops!", and: "Your password is \(newUser.password) 😉")
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue){
@@ -49,15 +63,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        switch textField {
-        case userNameTextField:
-            textField.resignFirstResponder()
+        if textField == userNameTextField {
             passwordTextField.becomeFirstResponder()
-        case passwordTextField:
-            textField.resignFirstResponder()
-            performSegue(withIdentifier: "goToWelcome", sender: nil)
-        default:
-            textField.resignFirstResponder()
+        } else {
+            logInButtonPressed()
         }
         return true
     }
