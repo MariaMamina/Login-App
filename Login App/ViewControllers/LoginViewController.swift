@@ -7,24 +7,14 @@
 
 import UIKit
 
-class User {var name: String
-            var password: String
-    
-    init (name: String, password: String) {
-        self.name = name
-        self.password = password
-    }
-}
-
-let newUser = User(name: "User", password: "Password")
-
-
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    let newUser = myInfo
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameTextField.delegate = self
@@ -34,15 +24,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
+        
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTextField.text
-    }
+     let tabBarController = segue.destination as! UITabBarController
+        guard let viewControllers = tabBarController.viewControllers else {
+            return
+        }
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userInfo = newUser
+            } else if let contactInfoVC = viewController as? ContactInformationViewController {
+                contactInfoVC.userInfo = newUser
+            } else if let aboutMeVC = viewController as? AboutMeViewController {
+                aboutMeVC.userInfo = newUser
+            }
+        }
+     }
     
     @IBAction func logInButtonPressed() {
-        if userNameTextField.text == newUser.name && passwordTextField.text == newUser.password {
+        if userNameTextField.text == newUser.userName && passwordTextField.text == newUser.password {
         performSegue(withIdentifier: "goToWelcome", sender: nil)
         } else {
             showAlert(with: "Invalid login or password", and: "Please, enter corect login or password")
@@ -50,7 +52,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgotUserName() {
-        showAlert(with: "Oops!", and: "Your name is \(newUser.name) 😉")
+        showAlert(with: "Oops!", and: "Your name is \(newUser.userName) 😉")
     }
     
     @IBAction func forgotPassword() {
