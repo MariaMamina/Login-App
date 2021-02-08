@@ -32,6 +32,7 @@
 		705F3D5125D0066A00376DD3 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		705F3D5625D03FBE00376DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../Color Mixer/Color Mixer/Assets.xcassets"; sourceTree = "<group>"; };
 		705F3D5A25D0672600376DD3 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		705F3D6525D1236F00376DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		705F3D0B25C9940000376DD3 /* Login App */ = {
 			isa = PBXGroup;
 			children = (
+				705F3D6425D1236F00376DD3 /* resourses */,
 				705F3D5625D03FBE00376DD3 /* Assets.xcassets */,
 				705F3D6025D0729F00376DD3 /* SupportingFiles */,
 				705F3D5D25D0713900376DD3 /* ViewControllers */,
@@ -109,6 +111,14 @@
 				705F3D1A25C9940200376DD3 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		705F3D6425D1236F00376DD3 /* resourses */ = {
+			isa = PBXGroup;
+			children = (
+				705F3D6525D1236F00376DD3 /* Assets.xcassets */,
+			);
+			path = resourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
