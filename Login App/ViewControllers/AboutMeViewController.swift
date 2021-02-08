@@ -8,13 +8,13 @@
 import UIKit
 
 class AboutMeViewController: UIViewController {
-
-    var userInfo: User!
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var photoImageView: UIImageView!
     @IBOutlet var dateOfBirthLabel: UILabel!
     @IBOutlet var hobbyLabel: UILabel!
+    
+    var userInfo: User!
     
     
     override func viewDidLoad() {
@@ -23,23 +23,10 @@ class AboutMeViewController: UIViewController {
         guard let userInfo = self.userInfo else {
             return
         }
-        nameLabel.text = userInfo.person
-        photoImageView.image = UIImage(named: userInfo.image)
-        dateOfBirthLabel.text = userInfo.dateOfBirth
-        hobbyLabel.text = userInfo.hobby
-
-        // Do any additional setup after loading the view.
+        nameLabel.text = userInfo.person.name
+        photoImageView.image = UIImage(named: userInfo.person.image)
+        dateOfBirthLabel.text = userInfo.person.dateOfBirth
+        hobbyLabel.text = userInfo.person.hobby
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

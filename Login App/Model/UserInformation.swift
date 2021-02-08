@@ -10,8 +10,11 @@ import Foundation
 struct User {
     let userName = "User"
     let password = "Password"
-    let person = "Maria Mamina"
-    
+    let person: Person
+}
+
+struct Person {
+    let name = "Maria Mamina"
     let dateOfBirth = "18.01.1985"
     let image = "photo.png"
     let hobby = "Fitness"
@@ -20,7 +23,6 @@ struct User {
     
 }
 struct ContactInfo {
-  
     let email = "maria.mamina3@gmail.com"
     let phoneNumber = "+358442704121"
     
@@ -28,6 +30,3 @@ struct ContactInfo {
     let city = "Helsinki"
     let adress = "Arabiankatu 4 C 125"
 }
-
-let newContactInfo = ContactInfo()
-let myInfo = User(contactInfo: newContactInfo)
