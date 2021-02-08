@@ -11,9 +11,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    
-    let newUser = myInfo
-    
+
+    let newUser = User(contactInfo: newContactInfo)
 
     override func viewDidLoad() {
         super.viewDidLoad()

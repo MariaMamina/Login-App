@@ -15,6 +15,7 @@ struct User {
     let dateOfBirth = "18.01.1985"
     let image = "photo.png"
     let hobby = "Fitness"
+    
     let contactInfo: ContactInfo
     
 }

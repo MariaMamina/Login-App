@@ -76,10 +76,10 @@
 		705F3D5D25D0713900376DD3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				705F3D2F25CB004600376DD3 /* WelcomeViewController.swift */,
 				705F3D2A25CACF3900376DD3 /* LoginViewController.swift */,
-				705F3D4625CF1F7300376DD3 /* ContactInformationViewController.swift */,
+				705F3D2F25CB004600376DD3 /* WelcomeViewController.swift */,
 				705F3D5A25D0672600376DD3 /* AboutMeViewController.swift */,
+				705F3D4625CF1F7300376DD3 /* ContactInformationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
