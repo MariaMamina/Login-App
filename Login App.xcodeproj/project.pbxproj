@@ -64,11 +64,11 @@
 		705F3D0B25C9940000376DD3 /* Login App */ = {
 			isa = PBXGroup;
 			children = (
+				705F3D5625D03FBE00376DD3 /* Assets.xcassets */,
 				705F3D6025D0729F00376DD3 /* SupportingFiles */,
 				705F3D5D25D0713900376DD3 /* ViewControllers */,
 				705F3D5E25D0718500376DD3 /* Model */,
 				705F3D5F25D0724900376DD3 /* Storyboard */,
-				705F3D5625D03FBE00376DD3 /* Assets.xcassets */,
 			);
 			path = "Login App";
 			sourceTree = "<group>";
